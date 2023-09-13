@@ -63,9 +63,12 @@ export async function updateChannel(channel: Partial<Channel>) {
             channel.id,
         ]
     );
-    const channelInstance = await getChannel(result.lastInsertId);
-    if (channelInstance) {
-        return channelInstance;
+
+    if (channel.id) {
+        const channelInstance = await getChannel(channel.id);
+        if (channelInstance) {
+            return channelInstance;
+        }
     }
     throw new Error("Can not get updated channel");
 }
