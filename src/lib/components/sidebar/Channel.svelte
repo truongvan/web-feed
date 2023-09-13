@@ -27,7 +27,6 @@
 
     async function loadFeeds(channelId: number | null) {
         await feedStore.loadDB(channelId);
-
         if (!$feedStore && channelId) {
             $feedStore = await getFeedDetail(
                 channel.name,
@@ -49,7 +48,7 @@
     aria-selected={$selectedChannelStore &&
         $selectedChannelStore.id === channel.id}
     on:selectstart|preventDefault
-    class="z-1 gap-3 flex justify-items-center items-center w-full overflow-hidden aria-selected:bg-magnum-600 rounded px-2">
+    class="z-1 gap-3 flex justify-items-center items-center w-full overflow-hidden rounded px-2 active:bg-gray-400 aria-selected:bg-gray-300 hover:bg-gray-200">
     <div class="flex items-center gap-1 mr-auto">
         <img
             class="h-8 w-8 rounded-full"
