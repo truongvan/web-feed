@@ -1,4 +1,5 @@
 <script>
+    import ToggleSidebar from "../sidebar/ToggleSidebar.svelte";
     import Align from "./Align.svelte";
     import Bookmark from "./Bookmark.svelte";
     import Export from "./Export.svelte";
@@ -12,10 +13,10 @@
     on:mousedown|preventDefault={async () => {
         const { window } = await import("@tauri-apps/api");
         await window.appWindow.startDragging();
-    }}
->
+    }}>
     <div class="mr-auto" />
     <div class="flex gap-1">
+        <div><ToggleSidebar /></div>
         <div><LoadContent /></div>
         <div><Bookmark /></div>
         <div><Align /></div>
