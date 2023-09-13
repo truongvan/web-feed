@@ -14,7 +14,7 @@
                 return channelObj.name === channel.name;
             });
 
-            if (channelObj && feed) {
+            if (channelObj && feed && feed.items) {
                 channelObj.itemCount = feed.items.length;
                 channelObj.updated_at = Date.now();
                 $channelStore = $channelStore;
