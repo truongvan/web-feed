@@ -6,6 +6,7 @@
     import type { Item } from "$lib/feed/type";
     import type { Channel as ChannelInterface } from "./type";
     import { channelStore } from "./store";
+    import { updateChannel } from "$lib/query/channel";
 
     dayjs.extend(relativeTime);
 
@@ -32,6 +33,7 @@
         let channel = $channelStore.find((c) => c.id === selectedChannel.id);
         if (channel) {
             channel = { ...selectedChannel };
+            updateChannel({ ...channel });
             $channelStore = $channelStore;
         }
     }
