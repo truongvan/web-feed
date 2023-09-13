@@ -74,7 +74,7 @@
                 </label>
                 <input
                     class="inline-flex h-8 w-full flex-1 items-center justify-center
-                    rounded-sm border border-solid px-3 leading-none text-magnum-800"
+                    rounded border border-solid px-3 leading-none text-magnum-800"
                     id="name"
                     bind:value={name} />
             </fieldset>
@@ -86,14 +86,14 @@
                 </label>
                 <input
                     class="inline-flex h-8 w-full flex-1 items-center justify-center
-                    rounded-sm border border-solid px-3 leading-none text-magnum-800"
+                    rounded border border-solid px-3 leading-none text-magnum-800"
                     id="url"
                     bind:value={url} />
             </fieldset>
             <div class="mt-6 flex justify-end gap-4">
                 <button
                     use:melt={$close}
-                    class="inline-flex h-8 items-center justify-center rounded-sm
+                    class="inline-flex h-8 items-center justify-center rounded
                     bg-zinc-100 px-4 font-medium leading-none text-zinc-600">
                     Cancel
                 </button>
@@ -102,7 +102,7 @@
                         saveChannel();
                         $open = false;
                     }}
-                    class="inline-flex h-8 items-center justify-center rounded-sm
+                    class="inline-flex h-8 items-center justify-center rounded
                     bg-magnum-100 px-4 font-medium leading-none text-magnum-900">
                     {channel ? "Save" : "Add"}
                 </button>

@@ -8,15 +8,16 @@
     let handleDisparcher = createEventDispatcher();
 </script>
 
-<div class="menu" use:melt={$menu}>
+<div
+    class="menu"
+    use:melt={$menu}>
     <div
         use:melt={$item}
         on:m-click={() => {
             handleDisparcher("refresh");
         }}
         type="button"
-        class="item"
-    >
+        class="item">
         Refresh
     </div>
     <div
@@ -26,19 +27,19 @@
             handleDisparcher("edit");
         }}
         type="button"
-        class="item"
-    >
+        class="item">
         Edit
     </div>
-    <div class="separator" use:melt={$separator} />
+    <div
+        class="separator"
+        use:melt={$separator} />
     <div
         use:melt={$item}
         on:m-click={() => {
             handleDisparcher("delete");
         }}
         type="button"
-        class="item"
-    >
+        class="item">
         Delete
     </div>
 </div>
@@ -53,7 +54,7 @@
         @apply min-w-[220px] shadow-md shadow-neutral-900/30;
     }
     .item {
-        @apply relative h-6 min-h-[24px] select-none rounded-sm pl-6 pr-1;
+        @apply relative h-6 min-h-[24px] select-none rounded pl-6 pr-1;
         @apply z-20 text-magnum-900 outline-none;
         @apply data-[highlighted]:bg-magnum-200 data-[highlighted]:text-magnum-900;
         @apply data-[disabled]:text-neutral-300;
