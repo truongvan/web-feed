@@ -23,7 +23,6 @@ export async function getFeedDetail(
     const rawFeed = extractFromXml(text.data, {
         normalization: true,
     });
-    console.log(rawFeed);
 
     const feed_raw: Omit<Feed, "id"> = {
         title: rawFeed.title ?? channelName,
