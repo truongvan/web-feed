@@ -7,9 +7,9 @@
 </script>
 
 <button
-    aria-checked={$sidebarWidthStore.show}
+    aria-pressed={$sidebarWidthStore.show}
     on:click|stopPropagation={handleClick}
     on:mousedown|stopPropagation
-    class="w-6 h-6 aria-checked:bg-magnum-500 aria-checked:text-white hover:bg-magnum-400 active:bg-magnum-600 rounded hover:text-white">
+    class="w-6 h-6 aria-pressed:bg-magnum-500 aria-pressed:text-white hover:bg-magnum-400 active:bg-magnum-600 rounded hover:text-white">
     <i class="bi bi-layout-sidebar" />
 </button>
