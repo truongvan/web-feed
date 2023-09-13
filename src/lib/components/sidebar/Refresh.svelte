@@ -4,7 +4,11 @@
 
     async function handleClick() {
         for (const channel of $channelStore) {
-            const feed = await getFeedDetail(channel.name, channel.url);
+            const feed = await getFeedDetail(
+                channel.name,
+                channel.url,
+                channel.id
+            );
 
             const channelObj = $channelStore.find((channelObj) => {
                 return channelObj.name === channel.name;
