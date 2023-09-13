@@ -38,6 +38,7 @@
     }
 </script>
 
+<!-- active:bg-gray-400 aria-selected:bg-gray-200 hover:bg-gray-200 -->
 <button
     use:melt={$trigger}
     role="tab"
@@ -48,7 +49,7 @@
     aria-selected={$selectedChannelStore &&
         $selectedChannelStore.id === channel.id}
     on:selectstart|preventDefault
-    class="z-1 gap-3 flex justify-items-center items-center w-full overflow-hidden rounded px-2 active:bg-gray-400 aria-selected:bg-gray-300 hover:bg-gray-200">
+    class="z-1 gap-3 flex justify-items-center items-center w-full overflow-hidden rounded px-2 bg-opacity-50 hover:bg-gray-200/40 active:bg-gray-200/60 aria-selected:bg-gray-200/50">
     <div class="flex items-center gap-1 mr-auto">
         <img
             class="h-8 w-8 rounded-full"
